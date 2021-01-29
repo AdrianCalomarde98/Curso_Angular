@@ -1,0 +1,20 @@
+<h1> {{heroe.nombre | uppercase}} <small> {{heroe.aparicion | date:'y' }} </small></h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{heroe.img}}" alt="{{heroe.nombre}}">
+        <br><br>
+        <a href="/heroes" class="btn btn-outline-warning btn-block">Volver</a>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>
+            {{heroe.bio}}
+        </p>
+        <div>
+            <img src="{{house}}" width="200" height="100">
+        </div>
+    </div>
+</div>
