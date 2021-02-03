@@ -1,0 +1,122 @@
+<h1 class="mt-3">Pipes <small>Angular</small></h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead class="darktablehead">
+                <tr>
+                    <th>Variable</th>
+                    <th>Pipe</th>
+                    <th>Salida</th>
+                </tr>
+            </thead>
+            <tbody class="tablebody">
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>uppercase</td>
+                    <td>{{nombre | uppercase}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>lowercase</td>
+                    <td>{{nombre | lowercase}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>slice:3</td>
+                    <td>{{nombre | slice:3}}</td>
+                </tr>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>slice:0:3</td>
+                    <td>{{nombre | slice:0:3}}</td>
+                </tr>
+                <tr>
+                    <td>{{lista}}</td>
+                    <td>slice:1:3</td>
+                    <td>{{lista | slice:1:3}}</td>
+                </tr>
+                <tr>
+                    <td>{{minombre}}</td>
+                    <td>capitalizado</td>
+                    <td>{{minombre | capitalizado}}</td>
+                </tr>
+                <tr>
+                    <td>{{pi}}</td>
+                    <td>number:'3.0-0'</td>
+                    <td>{{pi | number:'3.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{pi}}</td>
+                    <td>number:'.0-2'</td>
+                    <td>{{pi | number:'.0-2'}}</td>
+                </tr>
+                <tr>
+                    <td>{{pocentaje}}</td>
+                    <td>percent</td>
+                    <td>{{pocentaje | percent}}</td>
+                </tr>
+                <tr>
+                    <td>{{pocentaje}}</td>
+                    <td>percent:'2.2-2'</td>
+                    <td>{{pocentaje | percent:'2.2-2'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>currency</td>
+                    <td>{{salario | currency}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>currency:'EUR'</td>
+                    <td>{{salario | currency:'EUR'}}</td>
+                </tr>
+                <tr>
+                    <td>{{salario}}</td>
+                    <td>currency:'CAD':'symbol':'.0-0'</td>
+                    <td>{{salario | currency:'CAD':'symbol':'.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{valorPromesa}}</td>
+                    <td>Async</td>
+                    <td>{{valorPromesa | async}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date</td>
+                    <td>{{fecha | date}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'medium'</td>
+                    <td>{{fecha | date:'medium'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'short'</td>
+                    <td>{{fecha | date:'short'}}</td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date custom</td>
+                    <td>{{fecha | date:'MMMM - dd'}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>Slice</h4>
+        <ul>
+            <li *ngFor="let item of lista | slice:0:2">{{item}}</li>
+        </ul>
+        <h3>JSON</h3>
+        <hr>
+        <div class="row mb-5">
+            <div class="col">
+                <pre>
+                    {{heroe | json}}
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
